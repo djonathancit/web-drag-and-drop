@@ -190,6 +190,7 @@ function sendUploadMethodFirst(e) {
 function sendUploadMethodthird(e) {
   e.preventDefault();
   alert("upload com sucesso");
+  formUpload.classList.remove("is-uploading");
   formUpload.classList.add("is-success");
 }
 
