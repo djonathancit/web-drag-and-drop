@@ -18,6 +18,7 @@ function triggerFormSubmit() {
 }
 
 function adjustLabel() {
+  inputFile.value = "";
   labelFile.textContent = "";
   var node = document.createElement("strong");
   var textnode = document.createTextNode("Choose a file");
@@ -40,7 +41,7 @@ function showfileName(files) {
 
   if (files.length > 1) {
     alert("Permitido apenas 1 arquivo");
-    inputFile.value = "";
+
     adjustLabel();
     return;
   }
@@ -191,7 +192,7 @@ function sendUploadMethodthird(e) {
   e.preventDefault();
   alert("upload com sucesso");
   formUpload.classList.remove("is-uploading");
-  formUpload.classList.add("is-success");
+  adjustLabel();
 }
 
 //
@@ -240,10 +241,9 @@ function sendUploadMethodSecond() {
 
     if (isAdvancedUpload) {
       // ajax file upload for modern browsers
-      
+
       //sendUploadMethodFirst(e);
       sendUploadMethodthird(e);
-
     } // fallback Ajax solution upload for older browsers
     else {
       sendUploadMethodSecond();
