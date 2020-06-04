@@ -187,6 +187,12 @@ function sendUploadMethodFirst(e) {
   ajax.send(ajaxData);
 }
 
+function sendUploadMethodthird(e) {
+  e.preventDefault();
+  alert("upload com sucesso");
+  formUpload.classList.add("is-success");
+}
+
 //
 function sendUploadMethodSecond() {
   var iframeName = "uploadiframe" + new Date().getTime(),
