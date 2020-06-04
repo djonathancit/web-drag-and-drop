@@ -239,7 +239,10 @@ function sendUploadMethodSecond() {
 
     if (isAdvancedUpload) {
       // ajax file upload for modern browsers
-      sendUploadMethodFirst(e);
+      
+      //sendUploadMethodFirst(e);
+      sendUploadMethodthird(e);
+
     } // fallback Ajax solution upload for older browsers
     else {
       sendUploadMethodSecond();
